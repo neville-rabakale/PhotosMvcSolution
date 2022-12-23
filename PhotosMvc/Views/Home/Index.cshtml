@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model IndexVM[]
+<div class="text-Left">
+    <h4 class="display-4">Photos</h4>
+</div>
+
+<ul>
+    @foreach( var item in Model)
+    {    
+        <li>
+            <br>
+            <p>@item.Titel</p>
+            <br>
+            <div>
+                <img src="@item.ImageUrl" class="img-fluid" width="200" alt="Responsive image">
+            </div>
+        </li>
+    }
+</ul>
+
